@@ -6,13 +6,22 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.smartparking.utils.CommonFunctions;
+import com.example.smartparking.utils.Constants;
+import com.example.smartparking.utils.DataInterface;
+import com.example.smartparking.utils.Webservice_Volley;
 
-public class ForgotPassword extends AppCompatActivity {
+import org.json.JSONObject;
+
+import java.util.HashMap;
+
+public class ForgotPassword extends AppCompatActivity implements DataInterface {
 
     EditText edt_emailphonenumber;
     Button btn_submit;
+    Webservice_Volley volley;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +29,7 @@ public class ForgotPassword extends AppCompatActivity {
         setContentView(R.layout.activity_forgot_password);
         edt_emailphonenumber = (EditText)findViewById(R.id.edt_emailphonenumber);
         btn_submit = (Button)findViewById(R.id.btn_submit);
+        volley = new Webservice_Volley(this,this);
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,7 +56,17 @@ public class ForgotPassword extends AppCompatActivity {
                     }
 
                 }
+                String url = Constants.Webserive_Url + "forgotpsw.php";
+                HashMap<String,String> params = new HashMap<>();
+                params.put("U_email",edt_emailphonenumber.getText().toString());
+
+                volley.CallVolley(url,params,"forgotpsw");
             }
         });
+    }
+
+    @Override
+    public void getData(JSONObject jsonObject, String tag) {
+        Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
     }
 }

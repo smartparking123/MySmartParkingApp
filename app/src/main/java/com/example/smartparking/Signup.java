@@ -5,10 +5,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.smartparking.utils.CommonFunctions;
+import com.example.smartparking.utils.Constants;
+import com.example.smartparking.utils.DataInterface;
+import com.example.smartparking.utils.Webservice_Volley;
 
-public class Signup extends AppCompatActivity {
+import org.json.JSONObject;
+
+import java.util.HashMap;
+
+public class Signup extends AppCompatActivity implements DataInterface {
 
     EditText edt_name;
     EditText edt_phonenumber;
@@ -17,6 +25,8 @@ public class Signup extends AppCompatActivity {
     EditText edt_city;
     EditText edt_password;
     Button btn_signup;
+
+    Webservice_Volley volley;
 
 
     @Override
@@ -30,6 +40,9 @@ public class Signup extends AppCompatActivity {
         edt_city=(EditText)findViewById(R.id.edt_city);
         edt_password=(EditText)findViewById(R.id.edt_password);
         btn_signup=(Button)findViewById(R.id.btn_signup);
+
+        volley = new Webservice_Volley(this,this);
+
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,9 +93,28 @@ public class Signup extends AppCompatActivity {
                     return;
                 }
 
+                String url = Constants.Webserive_Url + "registration.php";
+                HashMap<String,String> params = new HashMap<>();
+                params.put("U_name",edt_name.getText().toString());
+                params.put("U_contactno",edt_phonenumber.getText().toString());
+                params.put("U_email",edt_email.getText().toString());
+                params.put("U_password",edt_password.getText().toString());
+                params.put("U_add",edt_address.getText().toString());
+                params.put("U_city",edt_city.getText().toString());
+                params.put("U_pic","");
+
+                volley.CallVolley(url,params,"registration");
+
+
 
 
             }
         });
+    }
+
+    @Override
+    public void getData(JSONObject jsonObject, String tag) {
+
+        Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
     }
 }

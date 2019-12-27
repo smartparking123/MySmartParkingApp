@@ -6,16 +6,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.example.smartparking.utils.CommonFunctions;
 
-public class Verification extends AppCompatActivity {
+import org.json.JSONObject;
+
+public class Verification extends AppCompatActivity  {
 
     EditText edt_number1;
     EditText edt_number2;
     EditText edt_number3;
     EditText edt_number4;
     Button btn_submit;
+
 
 
     @Override
@@ -27,6 +29,8 @@ public class Verification extends AppCompatActivity {
         edt_number3=(EditText)findViewById(R.id.edt_number3);
         edt_number4=(EditText)findViewById(R.id.edt_number4);
         btn_submit=(Button)findViewById(R.id.btn_submit);
+
+
         btn_submit.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -37,8 +41,12 @@ public class Verification extends AppCompatActivity {
                     Toast.makeText(Verification.this, "Please enter four digit verification code", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
+
             }
         });
 
     }
+
+
 }
