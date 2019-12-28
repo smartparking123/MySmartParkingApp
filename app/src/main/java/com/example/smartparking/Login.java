@@ -1,5 +1,6 @@
 package com.example.smartparking;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -89,6 +90,17 @@ public class Login extends AppCompatActivity implements DataInterface {
     public void getData(JSONObject jsonObject, String tag) {
 
         Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
+
+    }
+
+    public void Clickonsignup(View view) {
+        Intent i=new Intent(Login.this,Signup.class);
+        startActivity(i);
+    }
+
+    public void Clickonforgotpassword(View view) {
+        Intent i=new Intent(Login.this,ForgotPassword.class);
+        startActivity(i);
 
     }
 }

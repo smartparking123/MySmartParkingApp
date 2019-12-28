@@ -33,6 +33,16 @@
         android:hint="Enter Password"
         android:layout_marginTop="16dp"
         />
+
+    <TextView
+        android:id="@+id/txt3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        android:text="Forgot Password?"
+        android:onClick="Clickonforgotpassword"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,5 +50,16 @@
         android:text="LOGIN"
         android:gravity="center"
         android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        android:text="Dont have an account? Signup"
+        android:onClick="Clickonsignup"/>
+
 
 </LinearLayout>
