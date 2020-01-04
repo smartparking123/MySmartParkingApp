@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.smartparking">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,22 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ResetPassword"></activity>
-        <activity android:name=".Verification" />
-        <activity android:name=".ForgotPassword" />
-        <activity android:name=".Signup" >
-
-        </activity>
-        <activity android:name=".Login">
+        <activity android:name=".SplashActivity" android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ResetPassword" />
+        <activity android:name=".Verification" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".Signup"></activity>
+        <activity android:name=".Login">
 
         </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
