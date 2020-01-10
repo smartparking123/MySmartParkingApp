@@ -1,5 +1,6 @@
 package com.example.smartparking;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -67,6 +68,35 @@ public class ForgotPassword extends AppCompatActivity implements DataInterface {
 
     @Override
     public void getData(JSONObject jsonObject, String tag) {
-        Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
+
+        try {
+
+            Toast.makeText(this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+
+            if (jsonObject.getString("response").equalsIgnoreCase("1")) {
+
+
+                String code = jsonObject.getString("verificationcode");
+                String id = jsonObject.getString("id");
+
+                Toast.makeText(this, "Verification code : " + code, Toast.LENGTH_LONG).show();
+
+                Intent i = new Intent(ForgotPassword.this,Verification.class);
+                i.putExtra("code",code);
+                i.putExtra("id",id);
+                startActivity(i);
+
+
+
+
+            }
+
+
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
     }
 }

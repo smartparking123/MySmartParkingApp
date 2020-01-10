@@ -1,5 +1,6 @@
 package com.example.smartparking;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,9 @@ public class ResetPassword extends AppCompatActivity implements DataInterface {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reset_password);
+
+        userid = getIntent().hasExtra("id") ? getIntent().getStringExtra("id") : "0";
+
         edt_newpassword=(EditText)findViewById(R.id.edt_newpassword);
         edt_confirmnewpassword=(EditText)findViewById(R.id.edt_confirmnewpassword);
         btn_submit=(Button)findViewById(R.id.btn_submit);
@@ -45,17 +49,17 @@ public class ResetPassword extends AppCompatActivity implements DataInterface {
                     return;
                 }
                 if (!CommonFunctions.checkpassword(edt_newpassword.getText().toString())) {
-                    edt_newpassword.setError("Please enter valid password");
+                    edt_newpassword.setError("Please enter valid password ");
                     edt_newpassword.requestFocus();
 
                     return;
                 }
-                if (CommonFunctions.checkstring(edt_confirmnewpassword.getText().toString())) {
+                if (!CommonFunctions.checkstring(edt_confirmnewpassword.getText().toString())) {
                     edt_confirmnewpassword.setError("Please enter your password");
                     edt_confirmnewpassword.requestFocus();
                     return;
                 }
-                if (CommonFunctions.checkstring(edt_confirmnewpassword.getText().toString())) {
+                if (!CommonFunctions.checkstring(edt_confirmnewpassword.getText().toString())) {
                     edt_confirmnewpassword.setError("Please enter valid password");
                     edt_confirmnewpassword.requestFocus();
                     return;
@@ -74,6 +78,28 @@ public class ResetPassword extends AppCompatActivity implements DataInterface {
 
     @Override
     public void getData(JSONObject jsonObject, String tag) {
-        Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
+
+        try {
+
+            Toast.makeText(this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+
+            if (jsonObject.getString("response").equalsIgnoreCase("1")) {
+
+                Intent i = new Intent(ResetPassword.this,Login.class);
+                startActivity(i);
+
+                finishAffinity();
+
+
+
+
+            }
+
+
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }

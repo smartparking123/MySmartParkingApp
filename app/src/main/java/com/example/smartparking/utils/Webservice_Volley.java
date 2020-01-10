@@ -28,7 +28,6 @@ public class Webservice_Volley {
 
     RequestQueue requestQueue;
     Context context;
-    Webservice_Volley Volley;
 
     private DataInterface da;
 
@@ -37,7 +36,7 @@ public class Webservice_Volley {
     public Webservice_Volley(Context  cont,DataInterface da) {
 
         this.context=cont;
-        requestQueue= Volley.newRequestQueue(context);
+        requestQueue= com.android.volley.toolbox.Volley.newRequestQueue(context);
         this.da=da;
 
         progressDialog = new ProgressDialog(this.context);

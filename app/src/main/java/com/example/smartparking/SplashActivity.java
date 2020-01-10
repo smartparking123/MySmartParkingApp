@@ -29,6 +29,8 @@ public class SplashActivity extends AppCompatActivity {
             }
         };
 
+        background.run();
+
     }
 
 
