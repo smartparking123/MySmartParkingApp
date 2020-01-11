@@ -24,7 +24,7 @@ public class Signup extends AppCompatActivity implements DataInterface {
     EditText edt_address;
     EditText edt_city;
     EditText edt_password;
-    Button btn_signup;
+    Button   btn_signup;
 
     Webservice_Volley volley;
 
