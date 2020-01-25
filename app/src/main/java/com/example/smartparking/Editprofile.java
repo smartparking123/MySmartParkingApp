@@ -27,7 +27,7 @@ public class Editprofile extends AppCompatActivity implements DataInterface {
 
 
 
-    @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editprofile);
@@ -78,14 +78,7 @@ public class Editprofile extends AppCompatActivity implements DataInterface {
                     return;
                 }
 
-                String url = Constants.Webserive_Url + "registration.php";
-                HashMap<String,String> params = new HashMap<>();
-                params.put("U_name",edt_name.getText().toString());
-                params.put("U_contactno",edt_phonenumber.getText().toString());
-                params.put("U_email",edt_email.getText().toString());
-                params.put("U_add",edt_address.getText().toString());
-                params.put("U_city",edt_city.getText().toString());
-                params.put("U_pic","");
+
 
 
 
