@@ -43,12 +43,13 @@
                 android:id="@+id/textInputEmail"
                 style="@style/parent"
                 android:layout_marginTop="@dimen/loginViewsMargin">
+
                 <EditText
                     android:id="@+id/edt_emailphonenumber"
                     style="@style/modifiedEditText"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:hint="@string/login_email_hint"/>
+                    android:hint="@string/login_email_hint"
+                    android:inputType="text"
+                    android:maxLines="1" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
