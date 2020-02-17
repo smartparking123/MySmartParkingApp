@@ -12,22 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Homepage"></activity>
+        <activity android:name=".Select_panel"></activity>
+        <activity android:name=".Booking" />
+        <activity android:name=".Homepage" />
         <activity
             android:name=".Editprofile"
-            android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme"></activity>
         <activity android:name=".ResetPassword" />
         <activity android:name=".Verification" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".Signup" />
         <activity android:name=".Login" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

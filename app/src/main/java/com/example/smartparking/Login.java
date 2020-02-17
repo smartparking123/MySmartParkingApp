@@ -89,7 +89,17 @@ public class Login extends AppCompatActivity implements DataInterface {
     @Override
     public void getData(JSONObject jsonObject, String tag) {
 
-        Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
+
+        try {
+
+            Toast.makeText(this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
+
+            Intent i = new Intent(Login.this, Homepage.class);
+            startActivity(i);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
 
     }
 
