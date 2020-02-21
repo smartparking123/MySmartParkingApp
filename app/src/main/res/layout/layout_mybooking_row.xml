@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_bookingid"
+        android:hint="Booking Id"
+        android:textSize="16dp"
+        android:textStyle="bold">
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_name"
+        android:textSize="14dp"
+        android:textColorHint="black"
+        android:hint="Name">
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_date"
+        android:textSize="14dp"
+        android:textColorHint="black"
+        android:hint="Date">
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_time"
+        android:textSize="14dp"
+        android:textColorHint="black"
+        android:hint="Start and End time">
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_amount"
+        android:textSize="14dp"
+        android:textColorHint="black"
+        android:hint="Amount">
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_placeid"
+        android:textSize="14dp"
+        android:textColorHint="black"
+        android:hint="Panel no">
+    </TextView>
+
+
+    </LinearLayout>
