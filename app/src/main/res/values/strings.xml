@@ -3,7 +3,7 @@
     <string name="app_name" translatable="false">Smartparking</string>
     <string name="login_email_hint" translatable="false">Email</string>
     <string name="login_password_hint" translatable="false">Password</string>
-    <string name="forgot_password_hint" translatable="false">please enter your email/phonenumber</string>
+    <string name="forgot_password_hint" translatable="false">please enter your email/phonenumbr</string>
     <string name="reset_password_hint_new_pass" translatable="false">Enter NEW Password</string>
     <string name="reset_password_hint_confirm_pass" translatable="false">Confirm your password</string>
     <string name="forgot_password_text" translatable="false">Forgot \npassword?</string>

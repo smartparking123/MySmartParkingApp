@@ -84,7 +84,8 @@
                 android:text="My Booking"
                 android:textSize="25dp"
                 android:layout_marginLeft="16dp"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:onClick="Clickonmybooking"/>
 
         </LinearLayout>
 

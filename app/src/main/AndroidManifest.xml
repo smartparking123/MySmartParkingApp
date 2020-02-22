@@ -12,12 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Select_panel"></activity>
+        <activity android:name=".My_booking"></activity>
+        <activity android:name=".layout_mybooking_row" />
+        <activity android:name=".Select_panel" />
         <activity android:name=".Booking" />
         <activity android:name=".Homepage" />
         <activity
             android:name=".Editprofile"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity android:name=".ResetPassword" />
         <activity android:name=".Verification" />
         <activity android:name=".ForgotPassword" />

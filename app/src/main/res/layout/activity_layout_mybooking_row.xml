@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".layout_mybooking_row"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -12,6 +14,7 @@
         android:id="@+id/txt_bookingid"
         android:hint="Booking Id"
         android:textSize="16dp"
+        android:textColorHint="#000000"
         android:textStyle="bold">
     </TextView>
     <TextView
@@ -19,7 +22,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/txt_name"
         android:textSize="14dp"
-        android:textColorHint="black"
+        android:textColorHint="#000000"
         android:hint="Name">
     </TextView>
     <TextView
@@ -27,7 +30,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/txt_date"
         android:textSize="14dp"
-        android:textColorHint="black"
+        android:textColorHint="#000000"
         android:hint="Date">
     </TextView>
     <TextView
@@ -35,7 +38,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/txt_time"
         android:textSize="14dp"
-        android:textColorHint="black"
+        android:textColorHint="#000000"
         android:hint="Start and End time">
     </TextView>
     <TextView
@@ -43,7 +46,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/txt_amount"
         android:textSize="14dp"
-        android:textColorHint="black"
+        android:textColorHint="#000000"
         android:hint="Amount">
     </TextView>
     <TextView
@@ -51,9 +54,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/txt_placeid"
         android:textSize="14dp"
-        android:textColorHint="black"
+        android:textColorHint="#000000"
         android:hint="Panel no">
     </TextView>
-
-
-    </LinearLayout>
+</LinearLayout>

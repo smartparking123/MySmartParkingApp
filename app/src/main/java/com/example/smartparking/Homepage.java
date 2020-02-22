@@ -17,4 +17,8 @@ public class Homepage extends AppCompatActivity {
         Intent i=new Intent(Homepage.this,Booking.class);
         startActivity(i);
     }
+    public void Clickonmybooking(View view) {
+        Intent i=new Intent(Homepage.this,My_booking.class);
+        startActivity(i);
+    }
 }
