@@ -14,6 +14,8 @@ import android.widget.Toast;
 import com.example.smartparking.R;
 import com.example.smartparking.models.Datum;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 
@@ -37,12 +39,12 @@ public class MyBookingListAdapter extends RecyclerView.Adapter<MyBookingListAdap
 
 
         Datum datum = listdata.get(position);
-        holder.txt_bookingid.setText(datum.getBId());
-        holder.txt_name.setText(datum.getUName());
-        holder.txt_date.setText(datum.getBDate());
-        holder.txt_time.setText(datum.getBStartTime() + datum.getBEndTime());
-        holder.txt_amount.setText(datum.getBAmount());
-        holder.txt_placeid.setText(datum.getBPlaceid());
+        holder.txt_bookingid.setText("Booking ID: "+datum.getBId());
+        holder.txt_name.setText("Name: "+datum.getUName());
+        holder.txt_date.setText("Date: "+ parseDate(datum.getBDate()));
+        holder.txt_time.setText("Time: "+parseTime(datum.getBStartTime())+" to " + parseTime(datum.getBEndTime()));
+        holder.txt_amount.setText("Amount: "+datum.getBAmount());
+        holder.txt_placeid.setText("Place ID: "+datum.getBPlaceid());
 
     }  
   
@@ -65,6 +67,54 @@ public class MyBookingListAdapter extends RecyclerView.Adapter<MyBookingListAdap
             this.txt_amount = (TextView) itemView.findViewById(R.id.txt_amount);
             this.txt_placeid = (TextView) itemView.findViewById(R.id.txt_placeid);
         }
-    }  
+    }
+
+
+    public String parseDate(String dt) {
+
+        try {
+
+            SimpleDateFormat input = new SimpleDateFormat("yyyy-MM-dd");
+
+            SimpleDateFormat output = new SimpleDateFormat("dd MMMM yyyy");
+
+            Date date = input.parse(dt);
+
+            return output.format(date);
+
+
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+
+            return dt;
+        }
+
+
+    }
+
+
+    public String parseTime(String dt) {
+
+        try {
+
+            SimpleDateFormat input = new SimpleDateFormat("HH:mm");
+
+            SimpleDateFormat output = new SimpleDateFormat("hh:mm aa");
+
+            Date date = input.parse(dt);
+
+            return output.format(date);
+
+
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+
+            return dt;
+        }
+
+
+    }
 }  
 

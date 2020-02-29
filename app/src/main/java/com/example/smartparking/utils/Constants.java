@@ -6,7 +6,7 @@ package com.example.smartparking.utils;
 public class Constants {
 
 
-   public static final String Webserive_Url="http://192.168.43.213/smartparking/API/";
+   public static final String Webserive_Url="http://192.168.0.4/smartparking/API/";
 
 
    public static final String IMAGE_Url="http://192.168.1.3/Nutrition_Diet_App/Uploads/";
