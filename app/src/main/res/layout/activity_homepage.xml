@@ -89,6 +89,47 @@
 
         </LinearLayout>
 
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentPadding="24dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="16dp"
+        android:layout_marginTop="32dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/booking_icon"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/txt_mypayment"
+                android:textColor="@android:color/black"
+                android:inputType="text"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="My Payment"
+                android:textSize="25dp"
+                android:layout_marginLeft="16dp"
+                android:layout_gravity="center"
+                android:onClick="Clickonmypayment"/>
+
+        </LinearLayout>
+
+
+
 
 
 

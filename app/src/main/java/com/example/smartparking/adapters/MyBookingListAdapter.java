@@ -30,6 +30,7 @@ public class MyBookingListAdapter extends RecyclerView.Adapter<MyBookingListAdap
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {  
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());  
         View listItem= layoutInflater.inflate(R.layout.activity_layout_mybooking_row, parent, false);
+
         ViewHolder viewHolder = new ViewHolder(listItem);  
         return viewHolder;  
     }

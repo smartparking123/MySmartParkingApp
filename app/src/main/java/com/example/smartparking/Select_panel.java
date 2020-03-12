@@ -17,6 +17,8 @@ import com.sasidhar.smaps.payumoney.PayUMoney_Constants;
 
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 
 public class Select_panel extends AppCompatActivity implements DataInterface, MyListAdapter.setOnItemClickListner {
@@ -78,23 +80,7 @@ public class Select_panel extends AppCompatActivity implements DataInterface, My
         panel = String.valueOf(pos+1);
 
 
-       /* String url = Constants.Webserive_Url + "addbooking.php";
 
-        HashMap<String,String> params = new HashMap<>();
-
-        params.put("U_id","1");
-        params.put("U_name",edt_name);
-        params.put("U_contactno",edt_phonenumber);
-        params.put("B_date",edt_date);
-        params.put("B_start_time",edt_starttime);
-        params.put("B_end_time",edt_endtime);
-        params.put("B_amount",amount);
-        params.put("B_duration",duration);
-        params.put("B_status","0");
-        params.put("B_placeid",panel);
-
-        volley.CallVolley(url,params,"addbooking");
-*/
        initPayUMoney();
 
     }
@@ -143,6 +129,28 @@ public class Select_panel extends AppCompatActivity implements DataInterface, My
 
                     //Call API here for adding payment details in DB
 
+                      String url = Constants.Webserive_Url + "addbooking.php";
+
+                        HashMap<String,String> params = new HashMap<>();
+
+                        params.put("U_id","1");
+                        params.put("U_name",edt_name);
+                        params.put("U_contactno",edt_phonenumber);
+                        params.put("B_date",edt_date);
+                        params.put("B_start_time",edt_starttime);
+                        params.put("B_end_time",edt_endtime);
+                        params.put("B_amount",amount);
+                        params.put("B_duration",duration);
+                        params.put("B_status","0");
+                        params.put("B_placeid",panel);
+                        params.put("P_date",new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+                        params.put("P_time",new SimpleDateFormat("HH:mm").format(new Date()));
+                        params.put("P_status","paid");
+                        params.put("transaction_id",transaction_id);
+
+
+
+                        volley.CallVolley(url,params,"addbooking");
 
 
 
