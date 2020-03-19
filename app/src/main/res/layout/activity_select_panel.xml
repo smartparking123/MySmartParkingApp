@@ -14,4 +14,6 @@
         android:id="@+id/recyclerview_panels"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+
 </LinearLayout>

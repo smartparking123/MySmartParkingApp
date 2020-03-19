@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".My_payment"></activity>
+        <activity android:name=".check_booking" />
+        <activity android:name=".My_payment" />
         <activity android:name=".My_booking" />
         <activity android:name=".layout_mybooking_row" />
         <activity android:name=".Select_panel" />
