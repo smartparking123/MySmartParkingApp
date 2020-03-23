@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp"
-    android:background="#4FE9FF"
+    android:background="@drawable/homebackground"
     >
 
 
@@ -29,9 +29,9 @@
         android:onClick="Clickonnewbooking">
 
         <ImageView
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:src="@drawable/new_booking_icon"/>
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/new_booking"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,9 +70,9 @@
             android:layout_gravity="center">
 
             <ImageView
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:src="@drawable/my_booking_icon"/>
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/my_booking"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -109,9 +109,9 @@
             android:layout_gravity="center">
 
             <ImageView
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:src="@drawable/my_payments_icon"/>
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/my_payment2"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
